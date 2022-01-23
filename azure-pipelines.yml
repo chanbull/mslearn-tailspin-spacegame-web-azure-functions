@@ -103,11 +103,6 @@ stages:
               azureSubscription: 'Resource Manager - Tailspin - Space Game'
               appName: $(WebAppName)
               resourceGroupName: $(ResourceGroupName)
+              slotName: "production"
               appSettings: |
-                [
-                  {
-                    "name": "AppSettings:LeaderboardFunctionUrl",
-                    "value": "http://$(LeaderboardAppName).azurewebsites.net/api/LeaderboardFunction",
-                    "slotSetting": false
-                  }
-                ]
+                [{ "name": "AppSettings:LeaderboardFunctionUrl", "value": "http://$(LeaderboardAppName).azurewebsites.net/api/LeaderboardFunction", "slotSetting": false}]
